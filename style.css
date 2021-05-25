@@ -1,4 +1,13 @@
-body {background-color:tan;}
-h1{color:green;}
-
-
+/* background font style and color */
+body {background-color:black;font-family:arial;color:white}
+/* heading font style and color */
+h1{color:grey;font-family:verdana}
+/* creation of a box window */
+.maindiv{
+    background-color:white;
+    color:black;
+    width:300px;
+    padding:20px;
+    border-radius:25px;
+    align:center
+}

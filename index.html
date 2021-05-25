@@ -1,16 +1,42 @@
+<!--Information to the browser of the type of document, in this case html-->
+<!DOCTYPE html>
 <html>
     <head>
-    <script src="script.js"></script>
-    <link rel="stylesheet" href="style.css">
+        <title>Simple Interest Calculator</title>
+        <!-- src attribute to run javascript into html page from script.js file -->
+        <script src="script.js"></script>
+        <!--stylesheet from style.css file -->
+        <link rel="stylesheet" href="style.css">
+        
     </head>
-    <body>
-        <h1>Simple Interest Calculator</h1>
+    <!-- Body is moved to a div tag and class set to maindiv which point to style.css to have a custom stylesheet-->
+    <div class="maindiv">
+            <h1>Simple Interest Calculator</h1>
+        Amount <input type="number" id="principal">  <br/><br/>
+        <!-- set min, max step and value of the rate and call on change of the rate the updateRate() function in script.js  -->
+        Rate <input type="range"  id="rate" min = "1" max = "20" step = "0.25" value = "10.25" onchange="updateRate()"> <span id="rate_val">10.25%</span> <br/>  <br/>
+        <!-- dropdown box with option from 1 to 10 -->
+        No. of Years
+        <select id="years">
+         <option value="1">1</option>
+         <option value="2">2</option>
+         <option value="3">3</option>
+         <option value="4">4</option>
+         <option value="5">5</option>
+         <option value="6">6</option>
+         <option value="7">7</option>
+         <option value="8">8</option>
+         <option value="9">9</option>
+         <option value="10">10</option>
 
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input type="number"  id="rate">  <br/>
-        No. of Years <input type="number"  id="years">  <br/>
-        Interest : <span id="result"></span><br>
+        </select> <br/> <br/>
+        <!-- on click, the compute function is called from the script.js, calculate the interest and return a message on screen -->
+        <button onclick="compute()">Compute Interest </button><br/>
+        <span id="result"></span>
+        
+        <footer>
+            &#169; This Calculator belongs to Everyone Can Get Rich (Sam&IBM)
+        </footer>
+    </div>
 
-        <button onclick="compute()">Compute</button>
-    </body>
 </html>
